@@ -57,7 +57,7 @@ func GetSecret(clientset *kubernetes.Clientset) {
 
 	}
 }
-
+// print all pods
 func listpod(clientset *kubernetes.Clientset) {
 	podlist, err := clientset.CoreV1().Pods("").List(context.Background(), metav1.ListOptions{})
 	if err != nil {
